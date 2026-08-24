@@ -24,16 +24,22 @@ export default function About() {
 
   return (
     <>
+      {/* PAGE HEADER */}
+
       <div className="page-header">
         <div className="breadcrumb">
           <Link to="/">Home</Link> / <span>Why Leensfoam</span>
         </div>
+
         <h1>Built on experience. Driven by quality.</h1>
+
         <p>
           Every Leensfoam roller carries expertise going back to 1982 — long
           before it was a company, it was a craft.
         </p>
       </div>
+
+      {/* OUR STORY */}
 
       <section style={{ paddingTop: 0 }}>
         <div className="section-head reveal">
@@ -41,6 +47,7 @@ export default function About() {
             <span className="section-eyebrow">OUR STORY</span>
             <h2>From craft to company.</h2>
           </div>
+
           <p>
             We import raw materials from Bengaluru, Mumbai and Istanbul, and
             manufacture every roller in-house — so quality is checked at
@@ -53,6 +60,7 @@ export default function About() {
             {TIMELINE.map((t) => (
               <div className="timeline-item" key={t.yr}>
                 <span className="yr">{t.yr}</span>
+
                 <div>
                   <h4>{t.title}</h4>
                   <p>{t.body}</p>
@@ -63,47 +71,204 @@ export default function About() {
         </div>
       </section>
 
+      {/* =====================================================
+          WHY CHOOSE US
+      ===================================================== */}
+
       <section>
         <div className="section-head reveal">
           <div>
             <span className="section-eyebrow">WHY LEENSFOAM</span>
-            <h2>Quality in every roll.</h2>
+            <h2>Why choose us</h2>
           </div>
         </div>
+
         <div className="why-grid reveal">
+
+          {/* PREMIUM QUALITY FABRICS */}
+
           <div className="why-card">
-            <div className="ic"></div>
-            <h4>Quality &amp; Performance</h4>
-            <p>Rollers with excellent paint pickup and release, built to hold their shape from the first stroke to the last.</p>
+            <div className="ic">
+              <img
+                src="/assets/icon/premium-quality.png"
+                alt=""
+              />
+            </div>
+
+            <h4>Premium Quality Fabrics</h4>
+
+            <p>
+              Engineered for excellent paint pickup, smooth application and a
+              professional finish.
+            </p>
           </div>
+
+          {/* MADE WITH PRIDE */}
+
           <div className="why-card">
-            <div className="ic"></div>
-            <h4>Easy to Use</h4>
-            <p>Balanced for smoother application and effortless, streak-free coverage on any surface.</p>
+            <div className="ic">
+              <img
+                src="/assets/icon/made-with-pride.png"
+                alt=""
+              />
+            </div>
+
+            <h4>Made with Pride</h4>
+
+            <p>
+              Every roller is manufactured with care, precision and a
+              commitment to delivering dependable quality.
+            </p>
           </div>
+
+          {/* CONSISTENT PERFORMANCE */}
+
           <div className="why-card">
-            <div className="ic"></div>
-            <h4>Premium Raw Materials</h4>
-            <p>Sourced from trusted global partners, checked for consistency before they reach the line.</p>
+            <div className="ic">
+              <img
+                src="/assets/icon/consistent-performance.png"
+                alt=""
+              />
+            </div>
+
+            <h4>Consistent Performance</h4>
+
+            <p>
+              Strict quality control ensures uniform performance and
+              consistency from batch to batch.
+            </p>
           </div>
+
+          {/* BUILT FOR PROFESSIONALS */}
+
           <div className="why-card">
-            <div className="ic"></div>
-            <h4>Manufacturing Guarantee</h4>
-            <p>Every batch is quality-checked — what we manufacture is what we stand behind.</p>
+            <div className="ic">
+              <img
+                src="/assets/icon/trusted-partner.png"
+                alt=""
+              />
+            </div>
+
+            <h4>Built for Professionals</h4>
+
+            <p>
+              Designed to meet the demanding requirements of painters,
+              contractors, retailers and paint companies.
+            </p>
           </div>
+
+          {/* RELIABLE SUPPLY */}
+
+          <div className="why-card">
+            <div className="ic">
+              <img
+                src="/assets/icon/reliable-supply.png"
+                alt=""
+              />
+            </div>
+
+            <h4>Reliable Supply</h4>
+
+            <p>
+              Strong manufacturing capabilities help us deliver quality
+              products on time, across India.
+            </p>
+          </div>
+
+          {/* MANUFACTURING EXPERTISE */}
+
+          <div className="why-card">
+            <div className="ic">
+              <img
+                src="/assets/icon/manufacturing.png"
+                alt=""
+              />
+            </div>
+
+            <h4>Manufacturing Expertise</h4>
+
+            <p>
+              Our experience and manufacturing know-how allow us to
+              continuously improve our products and processes.
+            </p>
+          </div>
+
+          {/* MADE IN INDIA */}
+
+          <div className="why-card">
+            <div className="ic">
+              <img
+                src="/assets/icon/made-in-india.png"
+                alt=""
+              />
+            </div>
+
+            <h4>Made in India</h4>
+
+            <p>
+              Proudly manufactured in India, combining local expertise with
+              professional manufacturing standards.
+            </p>
+          </div>
+
+          {/* TRUSTED PARTNER */}
+
+          <div className="why-card">
+            <div className="ic">
+              <img
+                src="/assets/icon/partnership.png"
+                alt=""
+              />
+            </div>
+
+            <h4>Your Trusted Manufacturing Partner</h4>
+
+            <p>
+              We don't just supply painting rollers—we build long-term
+              partnerships through quality, consistency and service.
+            </p>
+          </div>
+
         </div>
       </section>
 
+      {/* =====================================================
+          FINAL CTA
+      ===================================================== */}
+
       <section className="cta-band">
         <div className="reveal">
-          <span className="section-eyebrow" style={{ justifyContent: 'center', display: 'flex' }}>
+
+          <span
+            className="section-eyebrow"
+            style={{
+              justifyContent: 'center',
+              display: 'flex',
+            }}
+          >
             GET IN TOUCH
           </span>
+
           <h2>
             Ready to stock rollers that{' '}
-            <em style={{ color: 'var(--orange)', fontStyle: 'normal' }}>actually perform?</em>
+
+            <em
+              style={{
+                color: 'var(--orange)',
+                fontStyle: 'normal',
+              }}
+            >
+              actually perform?
+            </em>
           </h2>
-          <Link to="/contact" className="btn-solid">Request the dealer catalogue</Link>
+
+          <Link
+            to="/contact"
+            className="btn-solid"
+          >
+            Request the dealer catalogue
+          </Link>
+
         </div>
       </section>
     </>
