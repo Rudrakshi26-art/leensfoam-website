@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="foot-grid">
 
         <div className="foot-brand">
-          <img src="/assets/logo.png" alt="Leensfoam logo" />
+          <img src="/assets/leensfoam.png" alt="Leensfoam logo" />
 
           <p>
             Leading manufacturer of premium fabric and foam painting rollers

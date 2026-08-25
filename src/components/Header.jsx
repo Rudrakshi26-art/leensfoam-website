@@ -31,8 +31,9 @@ export default function Header() {
         data-cursor="default"
       >
         <img
-          src="/assets/logo.png"
-          alt="Leensfoam logo"
+           src="/assets/leensfoam.png"
+           alt="Leensfoam logo"
+           className="header-logo"
         />
 
         <div className="brand-text">

@@ -57,9 +57,10 @@ export default function Home() {
         <div className="hero-grid">
 
           <div className="hero-text">
-            <h1 className="reveal">
-              Every stroke starts <em>with the roller.</em>
-            </h1>
+           <h1 className="reveal">
+  Every stroke starts{' '}
+  <span className="logo-gradient">with the roller.</span>
+</h1>
 
             <p className="hero-sub reveal">
               Leensfoam builds foam and fabric paint rollers for the painters,
