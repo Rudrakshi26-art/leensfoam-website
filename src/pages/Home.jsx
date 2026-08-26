@@ -161,8 +161,8 @@ export default function Home() {
               </p>
 
               <p>
-                67+ staff, 22+ years of experience, 140+ products,
-                distribution across 15+ Indian states.
+                67+ staff, 40+ years of experience, 500 + products,
+                distribution across 20 Indian states.
               </p>
 
               <div style={{ marginTop: '30px' }}>

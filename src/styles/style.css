@@ -51,14 +51,14 @@ header{
 }
 .brand{display:flex;align-items:center;gap:10px}
 .brand img {
-  height: 64px;
-  width: 64px;
+  height: 45px;
+  width: auto;
   object-fit: contain;
   background: transparent;
   border-radius: 0;
   padding: 0;
   display: block;
-  transform: scale(1.6);
+  transform: scale(1.5);
 }
 .brand-text{
   font-family:'Montserrat', sans-serif;
@@ -66,16 +66,19 @@ header{
   font-size:1.9rem;
   color:#fff;
   line-height:1;
+  text-transform: uppercase;
 }
-.brand-text span{
-  display:block;
-  font-family:'Montserrat', sans-serif;
-  font-size:.5rem;
-  letter-spacing:.18em;
-  color:rgba(255,255,255,.72);
-  font-weight:400;
-  margin-top:3px;
+.brand-text span {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .5rem;
+  letter-spacing: .25em;
+  color: rgba(255,255,255,.72);
+  font-weight: 400;
+  margin-top: 3px;
+  text-transform: uppercase;
 }
+
 nav{display:flex;gap:36px;align-items:center}
 nav a{
   font-size:.86rem;font-weight:500;color:#fff;
@@ -383,8 +386,8 @@ footer{
   gap:50px;padding-bottom:60px;border-bottom:1px solid rgba(246,243,236,.15);
 }
 .foot-brand img {
-  width: 120px;
-  height: 120px;
+  width: 350px;
+  height: 350px;
   object-fit: contain;
   display: block;
   background: transparent;

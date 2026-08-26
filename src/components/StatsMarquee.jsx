@@ -1,10 +1,9 @@
 const STATS = [
-  { n: '22+', l: 'Years of Experience', icon: 'shield' },
-  { n: '140+', l: 'Total Products', icon: 'roller' },
-  { n: '15+', l: 'Sales in States', icon: 'money' },
+  { n: '40+', l: 'Years of Experience', icon: 'shield' },
+  { n: '500+', l: 'Total Products', icon: 'roller' },
+  { n: '20', l: 'Sales in States', icon: 'money' },
   { n: '1982', l: 'Where it Began', icon: 'factory' },
   { n: '67+', l: 'Staff Members', icon: 'people' },
-  { n: '22+', l: 'Years of Experience', icon: 'star' },
 ];
 
 function StatIcon({ type }) {

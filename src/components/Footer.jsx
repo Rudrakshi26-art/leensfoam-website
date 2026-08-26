@@ -8,10 +8,6 @@ export default function Footer() {
         <div className="foot-brand">
           <img src="/assets/leensfoam.png" alt="Leensfoam logo" />
 
-          <p>
-            Leading manufacturer of premium fabric and foam painting rollers
-            since 2000, built on expertise dating back to 1982.
-          </p>
         </div>
 
         <div>
@@ -21,6 +17,7 @@ export default function Footer() {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About Us</Link></li>
             <li><Link to="/products">Products</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
 
