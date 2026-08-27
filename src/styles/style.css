@@ -335,14 +335,61 @@ section{padding:80px 6vw}
 .craft p{color:rgba(255,255,255,.72);line-height:1.65;max-width:600px;margin-bottom:18px}
 .craft .btn-ghost{color:#FFFFFF}
 .craft-list{display:flex;flex-direction:column}
-.craft-item{
-  display:grid;grid-template-columns:42px 1fr;gap:18px;padding:22px 0;
-  border-top:1px solid rgba(255,255,255,.15);align-items:start;
+.craft-item {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 14px;
+  padding: 22px 0;
+  border-top: 1px solid rgba(255,255,255,.15);
+  align-items: start;
 }
-.craft-item:first-child{border-top:none}
-.craft-item .num{color:var(--orange);font-size:.78rem;padding-top:3px}
-.craft-item h4{font-weight:700;margin-bottom:6px;color:#fff}
-.craft-item p{font-size:.86rem;color:rgba(255,255,255,.68);margin:0}
+
+.craft-item:first-child {
+  border-top: none;
+}
+
+/* Icon circle */
+.craft-icon {
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff6a00;
+  flex-shrink: 0;
+}
+
+/* Icon size */
+.craft-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Title + icon alignment */
+.craft-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.craft-title h4 {
+  margin: 0;
+}
+
+.craft-content h4 {
+  margin: 8px 0 6px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.craft-content p {
+  font-size: .86rem;
+  color: rgba(255,255,255,.68);
+  margin: 0;
+  line-height: 1.65;
+}
 
 .why-grid{
   display:grid;grid-template-columns:repeat(4,1fr);gap:2px;
@@ -386,8 +433,8 @@ footer{
   gap:50px;padding-bottom:60px;border-bottom:1px solid rgba(246,243,236,.15);
 }
 .foot-brand img {
-  width: 350px;
-  height: 350px;
+  width: 250px;
+  height: 250px;
   object-fit: contain;
   display: block;
   background: transparent;
@@ -590,3 +637,492 @@ form{background:#fff;border:1px solid var(--line);border-radius:24px;padding:44p
   }
 }
 
+/* =========================================
+   FULL RANGE SECTION
+========================================= */
+
+.full-range-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 70px 5% 55px;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   TOP SECTION
+========================================= */
+
+.full-range-container {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 50px;
+}
+
+
+/* =========================================
+   LEFT TEXT
+========================================= */
+
+.full-range-text {
+  width: 42%;
+  flex-shrink: 0;
+}
+
+.full-range-eyebrow {
+  color: #ff6900;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 20px;
+}
+
+
+.full-range-text h2 {
+  margin: 0 0 28px;
+
+  color: #123264;
+
+  font-size: clamp(44px, 4.2vw, 70px);
+
+  line-height: 1.05;
+
+  font-weight: 700;
+
+  letter-spacing: -1.5px;
+}
+
+
+.full-range-text p {
+  max-width: 520px;
+
+  margin: 0 0 30px;
+
+  color: #52627a;
+
+  font-size: 18px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.full-range-button {
+  border: none;
+
+  padding: 14px 30px;
+
+  border-radius: 30px;
+
+  background: linear-gradient(
+    90deg,
+    #ff9d00,
+    #a52c7b
+  );
+
+  color: #ffffff;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+
+.full-range-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================
+   LARGE ROLLER IMAGE
+========================================= */
+
+.full-range-image {
+  width: 55%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+.full-range-image img {
+  display: block;
+
+  width: 100%;
+
+  max-width: 780px;
+
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* =========================================
+   CATEGORY CARDS
+========================================= */
+
+.roller-category-grid {
+  width: 100%;
+
+  max-width: 1500px;
+
+  margin: 60px auto 0;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.roller-category-card {
+  position: relative;
+
+  min-height: 245px;
+
+  background: #ffffff;
+
+  border-radius: 20px;
+
+  padding: 25px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  border: 1px solid #eeeeee;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.roller-category-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.roller-card-content {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+
+.roller-card-icon {
+  width: 46px;
+
+  height: 46px;
+
+  border-radius: 50%;
+
+  background: #123264;
+
+  color: #ffffff;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 25px;
+
+  margin-bottom: 15px;
+}
+
+
+.roller-category-card h3 {
+  margin: 0 0 10px;
+
+  color: #123264;
+
+  font-size: 20px;
+
+  font-weight: 700;
+}
+
+
+.roller-category-card p {
+  margin: 0;
+
+  color: #52627a;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.roller-card-arrow {
+  display: block;
+
+  margin-top: 18px;
+
+  color: #ff6900;
+
+  font-size: 30px;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   CARD IMAGE
+========================================= */
+
+.roller-card-image {
+  position: absolute;
+
+  right: 10px;
+
+  bottom: 10px;
+
+  width: 48%;
+
+  max-width: 190px;
+
+  height: auto;
+
+  object-fit: contain;
+
+  z-index: 1;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+
+  .full-range-section {
+    padding: 55px 4% 45px;
+  }
+
+
+  .full-range-container {
+    gap: 30px;
+  }
+
+
+  .full-range-text {
+    width: 45%;
+  }
+
+
+  .full-range-image {
+    width: 55%;
+  }
+
+
+  .full-range-text h2 {
+    font-size: 48px;
+  }
+
+
+  .full-range-text p {
+    font-size: 16px;
+  }
+
+
+  .roller-category-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 18px;
+
+    margin-top: 45px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .full-range-section {
+    padding: 45px 20px 40px;
+  }
+
+
+  .full-range-container {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 35px;
+  }
+
+
+  .full-range-text {
+    width: 100%;
+  }
+
+
+  .full-range-eyebrow {
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+  }
+
+
+  .full-range-text h2 {
+    font-size: 40px;
+
+    line-height: 1.08;
+
+    letter-spacing: -0.8px;
+
+    margin-bottom: 22px;
+  }
+
+
+  .full-range-text p {
+    font-size: 16px;
+
+    line-height: 1.55;
+
+    margin-bottom: 25px;
+  }
+
+
+  .full-range-button {
+    font-size: 15px;
+
+    padding: 13px 25px;
+  }
+
+
+  .full-range-image {
+    width: 100%;
+  }
+
+
+  .full-range-image img {
+    width: 100%;
+
+    max-width: 600px;
+  }
+
+
+  .roller-category-grid {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+
+    margin-top: 40px;
+  }
+
+
+  .roller-category-card {
+    min-height: 220px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .full-range-section {
+    padding: 40px 16px 35px;
+  }
+
+
+  .full-range-text h2 {
+    font-size: 34px;
+  }
+
+
+  .full-range-text p {
+    font-size: 15px;
+  }
+
+
+  .roller-category-card {
+    min-height: 205px;
+
+    padding: 20px;
+  }
+
+
+  .roller-category-card h3 {
+    font-size: 18px;
+  }
+
+
+  .roller-category-card p {
+    font-size: 13px;
+  }
+
+
+  .roller-card-image {
+    width: 45%;
+
+    max-width: 160px;
+  }
+
+}

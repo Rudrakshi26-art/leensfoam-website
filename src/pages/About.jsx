@@ -14,7 +14,7 @@ const TIMELINE = [
   },
   {
     yr: 'Today',
-    title: '67+ staff, 140+ products, 15+ states',
+    title:  '140+ products, 15+ states',
     body: 'A full range of foam and fabric rollers, manufactured in-house with imported raw materials and distributed to dealers and contractors across India.',
   },
 ];

@@ -124,90 +124,376 @@ export default function Home() {
 
       <StatsMarquee />
 
-      <section>
-        <div className="section-head reveal">
-          <div>
-            <span className="section-eyebrow">THE FULL RANGE</span>
-            <h2>Rollers built for every surface, every job.</h2>
-          </div>
+      <section className="full-range-section">
 
-          <p>
-            From soft foam finishes on drywall to heavy-nap fabric rollers
-            for textured exteriors — see the full catalogue and filter by
-            category.
-          </p>
+  {/* TOP CONTENT */}
+  <div className="full-range-container">
+
+    {/* LEFT SIDE - TEXT */}
+    <div className="full-range-text">
+
+      <div className="full-range-eyebrow">
+        THE FULL RANGE
+      </div>
+
+      <h2>
+        Rollers built for
+        <br />
+        every surface,
+        <br />
+        every job.
+      </h2>
+
+      <p>
+        From soft foam finishes on drywall to heavy-nap fabric rollers
+        for textured exteriors — see the full catalogue and filter by category.
+      </p>
+
+      <button
+        className="full-range-button"
+        onClick={() => {
+          window.location.href = "/products";
+        }}
+      >
+        View all products
+      </button>
+
+    </div>
+
+
+    {/* RIGHT SIDE - LARGE IMAGE */}
+    <div className="full-range-image">
+      <img
+        src="/assets/roller logo.png"
+        alt="Paint rollers"
+      />
+    </div>
+
+  </div>
+
+
+  {/* CATEGORY CARDS */}
+  <div className="roller-category-grid">
+
+    {/* CARD 1 */}
+    <div className="roller-category-card">
+
+      <div className="roller-card-content">
+
+        <div className="roller-card-icon">
+          🏠
         </div>
 
-        <div className="reveal">
-          <Link to="/products" className="btn-solid">
-            View all products
+        <h3>
+          Interior Rollers
+        </h3>
+
+        <p>
+          Smooth, even finishes
+          <br />
+          for interior walls
+        </p>
+
+        <span className="roller-card-arrow">
+          →
+        </span>
+
+      </div>
+
+      <img
+        src="/assets/interior roller.png"
+        alt="Interior Roller"
+        className="roller-card-image"
+      />
+
+    </div>
+
+
+    {/* CARD 2 */}
+    <div className="roller-category-card">
+
+      <div className="roller-card-content">
+
+        <div className="roller-card-icon">
+          ▦
+        </div>
+
+        <h3>
+          Exterior Rollers
+        </h3>
+
+        <p>
+          Built for textured and
+          <br />
+          rough surfaces
+        </p>
+
+        <span className="roller-card-arrow">
+          →
+        </span>
+
+      </div>
+
+      <img
+        src="/assets/exterior roller.png"
+        alt="Exterior Roller"
+        className="roller-card-image"
+      />
+
+    </div>
+
+
+    {/* CARD 3 */}
+    <div className="roller-category-card">
+
+      <div className="roller-card-content">
+
+        <div className="roller-card-icon">
+          ▤
+        </div>
+
+        <h3>
+          Foam Rollers
+        </h3>
+
+        <p>
+          Clean application
+          <br />
+          for smooth finishes
+        </p>
+
+        <span className="roller-card-arrow">
+          →
+        </span>
+
+      </div>
+
+      <img
+        src="/assets/foam roller.png"
+        alt="Foam Roller"
+        className="roller-card-image"
+      />
+
+    </div>
+
+
+    {/* CARD 4 */}
+    <div className="roller-category-card">
+
+      <div className="roller-card-content">
+
+        <div className="roller-card-icon">
+          ☆
+        </div>
+
+        <h3>
+          Specialty Rollers
+        </h3>
+
+        <p>
+          Purpose-built solutions
+          <br />
+          for specific applications
+        </p>
+
+        <span className="roller-card-arrow">
+          →
+        </span>
+
+      </div>
+
+      <img
+        src="/assets/specialty roller.png"
+        alt="Specialty Roller"
+        className="roller-card-image"
+      />
+
+    </div>
+
+  </div>
+
+</section>
+      <section id="craft">
+  <div className="craft reveal">
+    <div className="craft-grid">
+
+      <div>
+        <h2>
+          Built on experience. <em>Driven by quality.</em>
+        </h2>
+
+        <p>
+          Founded in 2000, Leensfoam was shaped by expertise going back
+          to 1982 — long before it was a company, it was a craft. We
+          import raw materials from Bengaluru, Mumbai and Istanbul, and
+          manufacture every roller in-house.
+        </p>
+
+        <p>
+          40+ years of experience, 500 + products,
+          distribution across 20 Indian states.
+        </p>
+
+        <div style={{ marginTop: '30px' }}>
+          <Link to="/about" className="btn-ghost">
+            Read our full story →
           </Link>
         </div>
-      </section>
+      </div>
 
-      <section id="craft">
-        <div className="craft reveal">
-          <div className="craft-grid">
-            <div>
-              <h2>
-                Built on experience. <em>Driven by quality.</em>
-              </h2>
+      <div className="craft-list">
 
-              <p>
-                Founded in 2000, Leensfoam was shaped by expertise going back
-                to 1982 — long before it was a company, it was a craft. We
-                import raw materials from Bengaluru, Mumbai and Istanbul, and
-                manufacture every roller in-house.
-              </p>
+  <div className="craft-item">
+    <div className="craft-icon" aria-hidden="true">
+      {/* Shield icon */}
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+        <path
+          d="M12 3L20 6V11C20 16.5 16.5 20 12 21C7.5 20 4 16.5 4 11V6L12 3Z"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M8 12L10.5 14.5L16 9"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </div>
 
-              <p>
-                67+ staff, 40+ years of experience, 500 + products,
-                distribution across 20 Indian states.
-              </p>
+    <div className="craft-content">
+      <h4>Premium raw materials</h4>
+      <p>
+        Sourced from trusted global suppliers, checked before production begins.
+      </p>
+    </div>
+  </div>
 
-              <div style={{ marginTop: '30px' }}>
-                <Link to="/about" className="btn-ghost">
-                  Read our full story →
-                </Link>
-              </div>
-            </div>
 
-            <div className="craft-list">
-              <div className="craft-item">
-                <span className="num mono">01</span>
-                <div>
-                  <h4>Premium raw materials</h4>
-                  <p>Sourced from trusted global suppliers, checked before production begins.</p>
-                </div>
-              </div>
+  <div className="craft-item">
+    <div className="craft-icon" aria-hidden="true">
+      {/* Consistent performance / target icon */}
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+        <circle
+          cx="12"
+          cy="12"
+          r="8.5"
+          stroke="currentColor"
+          strokeWidth="1.8"
+        />
+        <circle
+          cx="12"
+          cy="12"
+          r="3"
+          stroke="currentColor"
+          strokeWidth="1.8"
+        />
+        <circle
+          cx="12"
+          cy="12"
+          r="1"
+          fill="currentColor"
+        />
+      </svg>
+    </div>
 
-              <div className="craft-item">
-                <span className="num mono">02</span>
-                <div>
-                  <h4>Advanced manufacturing</h4>
-                  <p>Modern machinery with quality checks at every stage of the line.</p>
-                </div>
-              </div>
+    <div className="craft-content">
+      <h4>Advanced manufacturing</h4>
+      <p>
+        Modern machinery with quality checks at every stage of the line.
+      </p>
+    </div>
+  </div>
 
-              <div className="craft-item">
-                <span className="num mono">03</span>
-                <div>
-                  <h4>Pan-India distribution</h4>
-                  <p>Reaching dealers and contractors through a trusted network nationwide.</p>
-                </div>
-              </div>
 
-              <div className="craft-item">
-                <span className="num mono">04</span>
-                <div>
-                  <h4>Customer-first approach</h4>
-                  <p>Same-day availability for standard products, backed by real relationships.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className="craft-item">
+    <div className="craft-icon" aria-hidden="true">
+      {/* Paint roller icon */}
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+        <path
+          d="M5 5H17C18.1 5 19 5.9 19 7V9C19 10.1 18.1 11 17 11H7C5.9 11 5 10.1 5 9V5Z"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M12 11V16"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+        <path
+          d="M12 16H15"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+        <path
+          d="M15 16V21"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+      </svg>
+    </div>
+
+    <div className="craft-content">
+      <h4>Professional results</h4>
+      <p>
+        Professional paint rollers engineered for consistent coverage,
+        smooth finish and reliable performance.
+      </p>
+    </div>
+  </div>
+
+
+  <div className="craft-item">
+    <div className="craft-icon" aria-hidden="true">
+      {/* Truck icon */}
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+        <path
+          d="M3 6H14V17H3V6Z"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M14 10H18L21 13V17H14V10Z"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinejoin="round"
+        />
+        <circle
+          cx="7"
+          cy="18"
+          r="2"
+          stroke="currentColor"
+          strokeWidth="1.8"
+        />
+        <circle
+          cx="17"
+          cy="18"
+          r="2"
+          stroke="currentColor"
+          strokeWidth="1.8"
+        />
+      </svg>
+    </div>
+
+    <div className="craft-content">
+      <h4>Reliable and timely supply</h4>
+      <p>
+        Same-day availability for standard products, backed by real relationships.
+      </p>
+    </div>
+  </div>
+
+</div>
+    </div>
+  </div>
+</section>
 
       <BrandCarousel />
 

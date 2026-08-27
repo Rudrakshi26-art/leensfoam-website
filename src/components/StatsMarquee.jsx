@@ -3,7 +3,7 @@ const STATS = [
   { n: '500+', l: 'Total Products', icon: 'roller' },
   { n: '20', l: 'Sales in States', icon: 'money' },
   { n: '1982', l: 'Where it Began', icon: 'factory' },
-  { n: '67+', l: 'Staff Members', icon: 'people' },
+ 
 ];
 
 function StatIcon({ type }) {
