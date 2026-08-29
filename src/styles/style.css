@@ -766,16 +766,11 @@ form{background:#fff;border:1px solid var(--line);border-radius:24px;padding:44p
   justify-content: center;
 }
 
-
-.full-range-image img {
+.full-range-image video {
   display: block;
-
-  width: 100%;
-
-  max-width: 780px;
-
+  width: 80%;
+  max-width: 720px;
   height: auto;
-
   object-fit: contain;
 }
 

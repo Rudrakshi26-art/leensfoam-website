@@ -163,9 +163,12 @@ export default function Home() {
 
     {/* RIGHT SIDE - LARGE IMAGE */}
     <div className="full-range-image">
-      <img
-        src="/assets/roller logo.png"
-        alt="Paint rollers"
+      <video
+          src="/assets/roller-animation-fixed-short.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
       />
     </div>
 
