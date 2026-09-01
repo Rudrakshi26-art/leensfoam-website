@@ -757,7 +757,7 @@ form{background:#fff;border:1px solid var(--line);border-radius:24px;padding:44p
 ========================================= */
 
 .full-range-image {
-  width: 55%;
+  width: 85%;
 
   display: flex;
 
@@ -768,12 +768,11 @@ form{background:#fff;border:1px solid var(--line);border-radius:24px;padding:44p
 
 .full-range-image video {
   display: block;
-  width: 80%;
+  width: 100%;
   max-width: 720px;
   height: auto;
   object-fit: contain;
 }
-
 
 /* =========================================
    CATEGORY CARDS

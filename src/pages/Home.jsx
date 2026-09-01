@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useEffect, useRef, useState } from 'react';
 import useReveal from '../hooks/useReveal.js';
 import StatsMarquee from '../components/StatsMarquee.jsx';
 import BrandCarousel from '../components/BrandCarousel.jsx';
@@ -50,6 +51,27 @@ function FeatureIcon({ type }) {
 
 export default function Home() {
   useReveal();
+
+  const sectionRef = useRef(null);
+  const videoWrapRef = useRef(null); // the video block — slides in from the right
+  const videoRef = useRef(null);
+  const [videoVisible, setVideoVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVideoVisible(true);
+          if (videoRef.current) videoRef.current.play().catch(() => {});
+          observer.disconnect(); // animate once only
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (videoWrapRef.current) observer.observe(videoWrapRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <>
@@ -124,12 +146,12 @@ export default function Home() {
 
       <StatsMarquee />
 
-      <section className="full-range-section">
+      <section className="full-range-section" ref={sectionRef}>
 
   {/* TOP CONTENT */}
   <div className="full-range-container">
 
-    {/* LEFT SIDE - TEXT */}
+    {/* LEFT SIDE - TEXT (fully static, no animation) */}
     <div className="full-range-text">
 
       <div className="full-range-eyebrow">
@@ -160,12 +182,14 @@ export default function Home() {
 
     </div>
 
-
-    {/* RIGHT SIDE - LARGE IMAGE */}
-    <div className="full-range-image">
+    {/* RIGHT SIDE - LARGE VIDEO — slides in from the right on scroll */}
+    <div
+      className={`full-range-image video-reveal${videoVisible ? ' video-visible' : ''}`}
+      ref={videoWrapRef}
+    >
       <video
-          src="/assets/roller-animation-fixed-short.mp4"
-          autoPlay
+          ref={videoRef}
+          src="/assets/roller-animation-final.mp4"
           muted
           loop
           playsInline
