@@ -51,7 +51,7 @@ header{
 }
 .brand{display:flex;align-items:center;gap:10px}
 .brand img {
-  height: 45px;
+  height: 70px;
   width: auto;
   object-fit: contain;
   background: transparent;
@@ -68,20 +68,22 @@ header{
   line-height:1;
   text-transform: uppercase;
 }
+
 .brand-text span {
   display: block;
+  text-align: center;
   font-family: 'Montserrat', sans-serif;
-  font-size: .5rem;
-  letter-spacing: .25em;
+  font-size: 0.85rem;
+  letter-spacing: 0.22em;
   color: rgba(255,255,255,.72);
   font-weight: 400;
-  margin-top: 3px;
-  text-transform: uppercase;
+  margin-top: 4px;
+  white-space: nowrap;
 }
 
 nav{display:flex;gap:36px;align-items:center}
 nav a{
-  font-size:.86rem;font-weight:500;color:#fff;
+  font-size:1.05rem;font-weight:500;color:#fff;
   position:relative;padding:4px 0;
 }
 nav a::after{
@@ -1117,6 +1119,480 @@ form{background:#fff;border:1px solid var(--line);border-radius:24px;padding:44p
     width: 45%;
 
     max-width: 160px;
+  }
+
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   Desktop → Tablet → Mobile
+   ========================================= */
+
+/* ---------- TABLET ---------- */
+@media (max-width: 1024px) {
+
+  /* Header */
+  header {
+    padding: 0 30px;
+  }
+
+  .brand img {
+    max-width: 220px;
+  }
+
+  nav {
+    gap: 24px;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+  }
+
+  .cta-btn {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+  }
+
+
+  /* Hero */
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+  }
+
+  .hero-roller-img {
+    width: 100%;
+    max-width: 550px;
+  }
+
+
+  /* Section heading */
+  .section-head {
+    gap: 40px;
+  }
+
+  .section-head h2 {
+    font-size: 2.8rem;
+  }
+
+
+  /* Craft section */
+  .craft-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+
+  .craft h2 {
+    font-size: 3rem;
+  }
+
+
+  /* Cards */
+  .cards,
+  .product-grid,
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+
+  /* Header */
+  header {
+    height: auto;
+    min-height: 80px;
+    padding: 12px 20px;
+  }
+
+  .brand img {
+    height: 55px;
+    width: auto;
+  }
+
+  /* Hide desktop navigation */
+  nav {
+    display: none;
+  }
+
+  .cta-btn {
+    display: none;
+  }
+
+
+  /* Hero */
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(2.5rem, 11vw, 4rem);
+    line-height: 1.05;
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .hero-features {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .feature-divider {
+    display: none;
+  }
+
+  .hero-actions {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .hero-visual {
+    width: 100%;
+  }
+
+  .hero-roller-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+
+  /* General sections */
+  section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+  /* Full range section */
+  .section-head {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .section-head h2 {
+    font-size: clamp(2.2rem, 9vw, 3rem);
+  }
+
+  .section-head p {
+    font-size: 1rem;
+  }
+
+
+  /* Cards */
+  .cards,
+  .product-grid,
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* Craft */
+  .craft-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .craft h2 {
+    font-size: clamp(2.4rem, 10vw, 3.5rem);
+  }
+
+  .craft p {
+    font-size: 1rem;
+  }
+
+
+  /* Craft list */
+  .craft-item {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 22px 0;
+  }
+
+  .craft-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .craft-title {
+    gap: 12px;
+  }
+
+  .craft-item h4 {
+    font-size: 1.1rem;
+  }
+
+  .craft-item p {
+    font-size: 0.95rem;
+  }
+
+
+  /* Buttons */
+  .btn-solid,
+  .btn-ghost {
+    font-size: 0.9rem;
+  }
+
+
+  /* CTA */
+  .cta-band {
+    padding: 70px 20px;
+  }
+
+  .cta-band h2 {
+    font-size: clamp(2.2rem, 9vw, 3.5rem);
+  }
+}
+
+
+/* ---------- SMALL MOBILE ---------- */
+@media (max-width: 480px) {
+
+  header {
+    padding: 10px 15px;
+  }
+
+  .brand img {
+    height: 48px;
+  }
+
+
+  .hero {
+    padding: 45px 15px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-sub {
+    font-size: 0.95rem;
+  }
+
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions a {
+    width: 100%;
+    text-align: center;
+  }
+
+
+  section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+
+  .section-head h2 {
+    font-size: 2.2rem;
+  }
+
+
+  .craft h2 {
+    font-size: 2.4rem;
+  }
+
+
+  .craft-item {
+    padding: 20px 0;
+  }
+
+
+  .cta-band {
+    padding: 55px 15px;
+  }
+}
+
+/* ================================
+   HAMBURGER MENU
+================================ */
+
+.hamburger {
+  display: none;
+  width: 42px;
+  height: 42px;
+  padding: 8px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 8px;
+  cursor: pointer;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all .25s ease;
+}
+
+
+/* Hamburger → X */
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* Mobile dealer button */
+
+.mobile-dealer-btn {
+  display: none;
+}
+
+
+/* ================================
+   MOBILE MENU
+================================ */
+
+@media (max-width: 700px) {
+
+  header {
+    position: relative;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: flex;
+    margin-left: auto;
+  }
+
+  /* Hide desktop dealer button */
+  header > .cta-btn {
+    display: none;
+  }
+
+  /* Mobile navigation */
+  header nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    padding: 10px 20px 20px;
+
+    background: rgba(10,14,28,.98);
+    border-top: 1px solid rgba(255,255,255,.1);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+
+    transition:
+      opacity .25s ease,
+      transform .25s ease,
+      visibility .25s ease;
+
+    z-index: 1000;
+  }
+
+  /* Menu open */
+  header nav.nav-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* Links */
+  header nav a {
+    width: 100%;
+    padding: 15px 5px;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (min-width: 701px) and (max-width: 900px) {
+
+  .hamburger {
+    display: flex;
+    margin-left: auto;
+  }
+
+  header > .cta-btn {
+    display: none;
+  }
+
+  header nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    padding: 10px 25px 20px;
+
+    background: rgba(10,14,28,.98);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+
+    transition: all .25s ease;
+    z-index: 1000;
+  }
+
+  header nav.nav-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  header nav a {
+    padding: 15px 5px;
+    border-bottom: 1px solid rgba(255,255,255,.08);
   }
 
 }

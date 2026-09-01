@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -14,6 +15,9 @@ export default function Header() {
 
   const linkClass = ({ isActive }) =>
     isActive ? 'active' : undefined;
+  const closeMenu = () => {
+  setMenuOpen(false);
+};
 
   return (
     <header
@@ -42,15 +46,24 @@ export default function Header() {
         </div>
       </NavLink>
 
-
+      <button
+        className="hamburger"
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       {/* Navigation */}
-      <nav>
+      <nav className={menuOpen ? 'nav-open' : ''}>
 
         <NavLink
           to="/"
           end
           className={linkClass}
           data-cursor="default"
+          onClick={closeMenu}
         >
           Home
         </NavLink>
@@ -59,6 +72,7 @@ export default function Header() {
           to="/products"
           className={linkClass}
           data-cursor="products"
+          onClick={closeMenu}
         >
           Products
         </NavLink>
@@ -67,6 +81,7 @@ export default function Header() {
           to="/about"
           className={linkClass}
           data-cursor="about"
+          onClick={closeMenu}
         >
           Why Leensfoam
         </NavLink>
@@ -75,6 +90,7 @@ export default function Header() {
           to="/contact"
           className={linkClass}
           data-cursor="contact"
+          onClick={closeMenu}
         >
           Contact
         </NavLink>
@@ -90,7 +106,6 @@ export default function Header() {
       >
         Become a Dealer →
       </NavLink>
-
     </header>
   );
 }
