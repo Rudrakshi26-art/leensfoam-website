@@ -593,11 +593,11 @@ form{background:#fff;border:1px solid var(--line);border-radius:24px;padding:44p
   .contact-grid{grid-template-columns:1fr}
   .form-row-2{grid-template-columns:1fr}
   .timeline-item{grid-template-columns:70px 1fr}
-  .brands-strip{padding:64px 6vw 72px}
-  .brands-heading{margin-bottom:40px}
-  .brands-track{gap:52px}
-  .brand-item{height:42px}
-}
+  .brands-strip{padding:35px 6vw 45px;}
+  .brands-heading{margin-bottom:25px;}
+  .brands-track{gap:40px;}
+  .brand-item{height:50px;}
+  }
 @media(max-width:600px){
   header{
     padding:12px 5vw;
