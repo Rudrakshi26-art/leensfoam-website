@@ -51,7 +51,7 @@ header{
 }
 .brand{display:flex;align-items:center;gap:10px}
 .brand img {
-  height: 70px;
+  height: 65px;
   width: auto;
   object-fit: contain;
   background: transparent;
@@ -4733,3 +4733,865 @@ img {
     font-size: 12px;
   }
 }
+
+
+/* =========================================================
+   LEENSFOAM — FINAL WHY LEENSFOAM PAGE OVERRIDES
+   WHITE + DARK NAVY
+   DESKTOP + TABLET + MOBILE
+   Added as the final layer so it overrides older duplicates.
+========================================================= */
+
+:root {
+  --why-navy: #06182b;
+  --why-blue: #123264;
+  --why-orange: #f36f0a;
+  --why-white: #ffffff;
+  --why-muted: #596579;
+  --why-line: rgba(18, 50, 100, 0.16);
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* =========================================================
+   PAGE HEADER — WHITE
+========================================================= */
+
+.page-header {
+  width: 100%;
+  box-sizing: border-box;
+  background: #ffffff !important;
+  color: var(--why-blue);
+  padding: 92px 6vw 52px !important;
+  overflow: hidden;
+}
+
+.page-header .breadcrumb {
+  margin-bottom: 16px;
+  font-size: 11px;
+  line-height: 1.4;
+  letter-spacing: 0.12em;
+  color: var(--why-muted);
+}
+
+.page-header .breadcrumb a {
+  color: var(--why-muted);
+  text-decoration: none;
+}
+
+.page-header .breadcrumb a:hover {
+  color: var(--why-orange);
+}
+
+.page-header h1 {
+  max-width: 850px;
+  margin: 0;
+  color: var(--why-blue) !important;
+  font-size: clamp(42px, 5vw, 72px);
+  line-height: 1.03;
+  letter-spacing: -1.8px;
+  font-weight: 700;
+}
+
+.page-header p {
+  max-width: 620px;
+  margin: 18px 0 0;
+  color: var(--why-muted) !important;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   MADE WITH PRECISION — DARK NAVY
+========================================================= */
+
+.precision-section {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 82px 0 88px !important;
+  background: var(--why-navy) !important;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.precision-container {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+}
+
+.precision-intro {
+  max-width: 720px;
+  margin-bottom: 38px;
+}
+
+.precision-intro .section-eyebrow {
+  display: inline-flex;
+  margin-bottom: 14px;
+  color: var(--why-orange);
+}
+
+.precision-intro h2 {
+  margin: 0 0 16px;
+  color: #ffffff !important;
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1.04;
+  letter-spacing: -1.5px;
+}
+
+.precision-intro p {
+  max-width: 620px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72) !important;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.precision-image {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.precision-image img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   WHY CHOOSE US — WHITE
+========================================================= */
+
+section:has(.why-grid) {
+  background: #ffffff !important;
+  color: var(--why-blue);
+}
+
+.why-section {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 82px 0 !important;
+  background: #ffffff !important;
+  color: var(--why-blue);
+}
+
+.why-section .section-head,
+section:has(.why-grid) .section-head {
+  width: min(1200px, 90%);
+  margin: 0 auto 36px;
+}
+
+.why-section .section-head h2,
+section:has(.why-grid) .section-head h2 {
+  color: var(--why-blue) !important;
+}
+
+.why-grid {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--why-line);
+  border: 1px solid var(--why-line);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.why-card {
+  min-width: 0;
+  padding: 28px 24px !important;
+  background: #ffffff !important;
+}
+
+.why-card .ic {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-card .ic img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.why-card h4 {
+  margin: 0 0 8px;
+  color: var(--why-blue) !important;
+  font-size: 14px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.why-card p {
+  margin: 0;
+  color: var(--why-muted) !important;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   BUILT TO SUPPLY — DARK NAVY
+========================================================= */
+
+section:has(.supply-grid) {
+  background: var(--why-navy) !important;
+  color: #ffffff;
+}
+
+.supply-section {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 82px 0 !important;
+  background: var(--why-navy) !important;
+  color: #ffffff !important;
+  overflow: hidden;
+}
+
+.supply-container {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 2fr);
+  gap: 42px;
+  align-items: center;
+}
+
+.supply-intro {
+  min-width: 0;
+}
+
+.supply-intro .section-eyebrow {
+  display: inline-flex;
+  margin-bottom: 14px;
+  color: var(--why-orange) !important;
+}
+
+.supply-intro h2 {
+  margin: 0 0 25px;
+  color: #ffffff !important;
+  font-size: clamp(38px, 4vw, 54px);
+  line-height: 1.06;
+  letter-spacing: -1.4px;
+}
+
+
+/* TALK TO OUR TEAM — GRADIENT
+   Hover keeps the same gradient and never becomes orange. */
+
+.supply-btn {
+  width: 300px;
+  max-width: 100%;
+  min-height: 52px;
+  padding: 0 25px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border: none !important;
+  border-radius: 8px;
+  background: linear-gradient(
+    90deg,
+    #ff7417 0%,
+    #d12d73 100%
+  ) !important;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 20px rgba(209, 45, 115, 0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.supply-btn .btn-text {
+  color: #ffffff !important;
+  white-space: nowrap;
+}
+
+.supply-btn .supply-arrow {
+  flex-shrink: 0;
+  color: #ffffff !important;
+  font-size: 24px;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .supply-btn:hover,
+  .supply-btn:focus-visible,
+  .supply-btn:active {
+    background: linear-gradient(
+      90deg,
+      #ff7417 0%,
+      #d12d73 100%
+    ) !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(209, 45, 115, 0.28);
+  }
+
+  .supply-btn:hover .supply-arrow {
+    color: #ffffff !important;
+    transform: translateX(5px);
+  }
+}
+
+
+/* SUPPLY CARDS */
+
+.supply-grid {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.supply-card {
+  min-width: 0;
+  min-height: 220px;
+  padding: 22px 19px !important;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: transparent !important;
+  border: 2px solid var(--why-orange) !important;
+  border-radius: 12px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.supply-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.supply-icon {
+  flex: 0 0 56px;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.supply-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.supply-content {
+  min-width: 0;
+}
+
+.supply-content h4 {
+  margin: 0 0 8px;
+  color: #ffffff !important;
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+.supply-content p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72) !important;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   FINAL CTA — WHITE
+========================================================= */
+
+.cta-band {
+  width: 100%;
+  box-sizing: border-box;
+  background: #ffffff !important;
+  color: var(--why-blue) !important;
+  text-align: center;
+  padding: 68px 6vw 82px !important;
+}
+
+.cta-band h2 {
+  max-width: 800px;
+  margin: 0 auto 26px;
+  color: var(--why-blue) !important;
+  font-size: clamp(34px, 4vw, 56px);
+  line-height: 1.07;
+  letter-spacing: -1px;
+}
+
+.cta-band h2 em {
+  color: var(--why-orange) !important;
+  font-style: normal;
+}
+
+
+/* =========================================================
+   DESKTOP
+   1101px+
+========================================================= */
+
+@media (min-width: 1101px) {
+
+  .page-header {
+    padding-top: 92px !important;
+    padding-bottom: 52px !important;
+  }
+
+  .precision-section {
+    padding: 82px 0 88px !important;
+  }
+
+  .why-section,
+  section:has(.why-grid) {
+    padding-top: 82px !important;
+    padding-bottom: 82px !important;
+  }
+
+  .supply-section,
+  section:has(.supply-grid) {
+    padding-top: 82px !important;
+    padding-bottom: 82px !important;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   768px – 1100px
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 1100px) {
+
+  .page-header {
+    padding: 82px 6% 48px !important;
+  }
+
+  .page-header h1 {
+    font-size: clamp(40px, 6vw, 58px);
+  }
+
+  .page-header p {
+    font-size: 15px;
+  }
+
+  .precision-section {
+    padding: 70px 0 75px !important;
+  }
+
+  .precision-container {
+    width: 92%;
+  }
+
+  .precision-intro {
+    max-width: 680px;
+    margin-bottom: 34px;
+  }
+
+  .precision-intro h2 {
+    font-size: clamp(38px, 5vw, 52px);
+  }
+
+  .precision-intro p {
+    font-size: 14px;
+  }
+
+  .why-section,
+  section:has(.why-grid) {
+    padding: 70px 0 !important;
+  }
+
+  .why-grid,
+  .why-section .section-head,
+  section:has(.why-grid) .section-head {
+    width: 92%;
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .why-card {
+    padding: 26px 22px !important;
+  }
+
+  .supply-section,
+  section:has(.supply-grid) {
+    padding: 70px 0 !important;
+  }
+
+  .supply-container {
+    width: 92%;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .supply-intro {
+    max-width: 700px;
+  }
+
+  .supply-intro h2 {
+    font-size: clamp(38px, 5vw, 50px);
+  }
+
+  .supply-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .supply-card {
+    min-height: 215px;
+    padding: 20px 16px !important;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .supply-icon {
+    width: 54px;
+    height: 54px;
+    flex-basis: 54px;
+  }
+
+  .supply-btn {
+    width: 280px;
+  }
+
+  .cta-band {
+    padding: 58px 30px 70px !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   0px – 767px
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .page-header {
+    padding: 76px 20px 38px !important;
+  }
+
+  .page-header .breadcrumb {
+    margin-bottom: 14px;
+    font-size: 9px;
+  }
+
+  .page-header h1 {
+    font-size: clamp(32px, 9vw, 44px);
+    line-height: 1.06;
+    letter-spacing: -0.7px;
+  }
+
+  .page-header p {
+    margin-top: 14px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .precision-section {
+    padding: 52px 0 58px !important;
+  }
+
+  .precision-container {
+    width: 90%;
+  }
+
+  .precision-intro {
+    margin-bottom: 28px;
+  }
+
+  .precision-intro h2 {
+    font-size: clamp(31px, 8.5vw, 42px);
+    line-height: 1.08;
+  }
+
+  .precision-intro p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .precision-image {
+    border-radius: 7px;
+  }
+
+  .why-section,
+  section:has(.why-grid) {
+    padding: 52px 0 !important;
+  }
+
+  .why-section .section-head,
+  section:has(.why-grid) .section-head {
+    width: 90%;
+    margin-bottom: 26px;
+  }
+
+  .why-grid {
+    width: 90%;
+    grid-template-columns: 1fr;
+    border-radius: 13px;
+  }
+
+  .why-card {
+    padding: 22px 19px !important;
+  }
+
+  .why-card .ic {
+    width: 48px;
+    height: 48px;
+  }
+
+  .why-card .ic img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .why-card h4 {
+    font-size: 14px;
+  }
+
+  .why-card p {
+    font-size: 12px;
+  }
+
+  .supply-section,
+  section:has(.supply-grid) {
+    padding: 52px 0 58px !important;
+  }
+
+  .supply-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .supply-intro {
+    width: 100%;
+  }
+
+  .supply-intro h2 {
+    margin-bottom: 21px;
+    font-size: clamp(31px, 8.5vw, 42px);
+    line-height: 1.08;
+  }
+
+  .supply-btn {
+    width: 100%;
+    min-height: 50px;
+    padding: 0 19px;
+    font-size: 12px;
+  }
+
+  .supply-btn .supply-arrow {
+    font-size: 22px;
+  }
+
+  .supply-grid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .supply-card {
+    width: 100%;
+    min-height: 0;
+    padding: 19px !important;
+    display: grid;
+    grid-template-columns: 46px minmax(0, 1fr);
+    align-items: center;
+    gap: 14px;
+    border-radius: 10px;
+  }
+
+  .supply-icon {
+    width: 46px;
+    height: 46px;
+    flex-basis: 46px;
+  }
+
+  .supply-content h4 {
+    font-size: 14px;
+  }
+
+  .supply-content p {
+    font-size: 11.5px;
+    line-height: 1.5;
+  }
+
+  .cta-band {
+    padding: 48px 20px 58px !important;
+  }
+
+  .cta-band h2 {
+    font-size: clamp(29px, 8vw, 40px);
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   0px – 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .page-header {
+    padding: 70px 16px 34px !important;
+  }
+
+  .page-header h1 {
+    font-size: 31px;
+  }
+
+  .precision-section {
+    padding: 46px 0 50px !important;
+  }
+
+  .precision-container,
+  .why-grid,
+  .why-section .section-head,
+  section:has(.why-grid) .section-head,
+  .supply-container {
+    width: 92%;
+  }
+
+  .precision-intro h2,
+  .supply-intro h2 {
+    font-size: 30px;
+  }
+
+  .why-section,
+  section:has(.why-grid) {
+    padding: 46px 0 !important;
+  }
+
+  .why-card {
+    padding: 20px 17px !important;
+  }
+
+  .supply-section,
+  section:has(.supply-grid) {
+    padding: 46px 0 50px !important;
+  }
+
+  .supply-btn {
+    min-height: 48px;
+    padding: 0 17px;
+    font-size: 11.5px;
+  }
+
+  .supply-card {
+    padding: 17px !important;
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 13px;
+  }
+
+  .supply-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .supply-content h4 {
+    font-size: 13.5px;
+  }
+
+  .supply-content p {
+    font-size: 11.5px;
+  }
+
+  .cta-band {
+    padding: 44px 16px 54px !important;
+  }
+
+  .cta-band h2 {
+    font-size: 29px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   360px AND BELOW
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .page-header {
+    padding: 66px 13px 32px !important;
+  }
+
+  .page-header h1 {
+    font-size: 28px;
+  }
+
+  .precision-container,
+  .why-grid,
+  .why-section .section-head,
+  section:has(.why-grid) .section-head,
+  .supply-container {
+    width: 94%;
+  }
+
+  .precision-intro h2,
+  .supply-intro h2 {
+    font-size: 27px;
+  }
+
+  .supply-card {
+    grid-template-columns: 39px minmax(0, 1fr);
+    gap: 11px;
+  }
+
+  .supply-icon {
+    width: 39px;
+    height: 39px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .supply-btn,
+  .supply-card,
+  .supply-arrow {
+    transition: none !important;
+  }
+}
+
