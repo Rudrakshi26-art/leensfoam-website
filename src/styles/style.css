@@ -5594,3 +5594,141 @@ section:has(.supply-grid) {
     transition: none !important;
   }
 }
+/* =========================================================
+   MADE WITH PRECISION — FIX TOP SPACING
+========================================================= */
+
+.precision-section {
+  position: relative;
+  padding-top: 90px !important;
+  padding-bottom: 80px !important;
+  overflow: visible !important;
+}
+
+.precision-section .section-eyebrow {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  z-index: 5 !important;
+  margin-bottom: 18px !important;
+}
+
+.precision-section h2 {
+  margin-top: 0 !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 769px) and (max-width: 1100px) {
+  .precision-section {
+    padding-top: 70px !important;
+    padding-bottom: 65px !important;
+  }
+
+  .precision-section .section-eyebrow {
+    margin-bottom: 14px !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .precision-section {
+    padding-top: 75px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .precision-section .section-eyebrow {
+    margin-bottom: 12px !important;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .precision-section {
+    padding-top: 110px !important;
+    padding-bottom: 45px !important;
+  }
+}
+/* FINAL FIX — CONTENT BELOW FIXED HEADER */
+
+.page-header {
+  padding-top: 120px !important;
+}
+
+.precision-section {
+  padding-top: 110px !important;
+}
+
+@media (max-width: 1024px) {
+  .page-header {
+    padding-top: 105px !important;
+  }
+
+  .precision-section {
+    padding-top: 90px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-header {
+    padding-top: 90px !important;
+  }
+
+  .precision-section {
+    padding-top: 80px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header {
+    padding-top: 80px !important;
+  }
+
+  .precision-section {
+    padding-top: 70px !important;
+  }
+}
+/* =========================================
+   BETTER PERFORMANCE GRADIENT
+========================================= */
+
+.precision-intro h2 .better-performance {
+  background: linear-gradient(
+    90deg,
+    #ff7417 0%,
+    #d12d73 100%
+  ) !important;
+
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+
+  color: transparent !important;
+}
+/* PARTNER FOR GROWTH GRADIENT */
+
+.growth-text {
+  background: linear-gradient(
+    90deg,
+    #ff7417 0%,
+    #d12d73 100%
+  ) !important;
+
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+
+  color: transparent !important;
+}

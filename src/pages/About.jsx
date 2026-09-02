@@ -24,35 +24,35 @@ export default function About() {
 
   return (
     <>
-      {/* PAGE HEADER */}
+{/* 
+<div className="page-header">
+  <div className="breadcrumb">
+    <Link to="/">Home</Link> / <span>Why Leensfoam</span>
+  </div>
 
-      <div className="page-header">
-        <div className="breadcrumb">
-          <Link to="/">Home</Link> / <span>Why Leensfoam</span>
-        </div>
+  <h1>Built on experience. Driven by quality.</h1>
 
-        <h1>Built on experience. Driven by quality.</h1>
-
-        <p>
-          Every Leensfoam roller carries expertise going back to 1982 — long
-          before it was a company, it was a craft.
-        </p>
-      </div>
+  <p>
+    Every Leensfoam roller carries expertise going back to 1982 — long
+    before it was a company, it was a craft.
+  </p>
+</div>
+*/}
 
 {/* =====================================================
     ENGINEERED FOR BETTER PERFORMANCE
 ===================================================== */}
 
-<section className="precision-section">
+<section className="precision-section" style={{ paddingTop: '120px' }}>
   <div className="precision-container">
 
     <div className="precision-intro reveal">
-      <span className="section-eyebrow">
+      <span className="section-eyebrow precision-eyebrow">
         MADE WITH PRECISION
       </span>
 
       <h2>
-        Engineered for Better Performance.
+        Engineered for <span className="better-performance">Better Performance.</span>
       </h2>
 
       <p>
@@ -71,7 +71,6 @@ export default function About() {
 
   </div>
 </section>
-
 {/* =====================================================
     OUR STORY — COMMENTED OUT
 =====================================================
@@ -282,11 +281,9 @@ export default function About() {
         BUILT TO SUPPLY. BUILT TO SCALE.
       </span>
 
-      <h2>
-        Your Reliable Manufacturing
-        <br className="desktop-break" />
-        Partner for Growth.
-      </h2>
+      <h1>
+        Your Reliable Manufacturing <span className="growth-text">Partner for Growth.</span>
+      </h1>
 
       <Link to="/contact" className="supply-btn">
         <span>TALK TO OUR TEAM</span>
