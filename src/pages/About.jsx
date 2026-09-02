@@ -39,37 +39,74 @@ export default function About() {
         </p>
       </div>
 
-      {/* OUR STORY */}
+{/* =====================================================
+    ENGINEERED FOR BETTER PERFORMANCE
+===================================================== */}
 
-      <section style={{ paddingTop: 0 }}>
-        <div className="section-head reveal">
+<section className="precision-section">
+  <div className="precision-container">
+
+    <div className="precision-intro reveal">
+      <span className="section-eyebrow">
+        MADE WITH PRECISION
+      </span>
+
+      <h2>
+        Engineered for Better Performance.
+      </h2>
+
+      <p>
+        Every component of a Leensfoam roller is designed with
+        purpose — from the handle and frame to the core and
+        premium fabric.
+      </p>
+    </div>
+
+    <div className="precision-image reveal">
+      <img
+        src="/assets/roller expload.png"
+        alt="Leensfoam roller components"
+      />
+    </div>
+
+  </div>
+</section>
+
+{/* =====================================================
+    OUR STORY — COMMENTED OUT
+=====================================================
+
+<section style={{ paddingTop: 0 }}>
+  <div className="section-head reveal">
+    <div>
+      <span className="section-eyebrow">OUR STORY</span>
+      <h2>From craft to company.</h2>
+    </div>
+
+    <p>
+      We import raw materials from Bengaluru, Mumbai and Istanbul, and
+      manufacture every roller in-house — so quality is checked at
+      every stage, not just the last one.
+    </p>
+  </div>
+
+  <div className="reveal">
+    <div className="timeline">
+      {TIMELINE.map((t) => (
+        <div className="timeline-item" key={t.yr}>
+          <span className="yr">{t.yr}</span>
+
           <div>
-            <span className="section-eyebrow">OUR STORY</span>
-            <h2>From craft to company.</h2>
-          </div>
-
-          <p>
-            We import raw materials from Bengaluru, Mumbai and Istanbul, and
-            manufacture every roller in-house — so quality is checked at
-            every stage, not just the last one.
-          </p>
-        </div>
-
-        <div className="reveal">
-          <div className="timeline">
-            {TIMELINE.map((t) => (
-              <div className="timeline-item" key={t.yr}>
-                <span className="yr">{t.yr}</span>
-
-                <div>
-                  <h4>{t.title}</h4>
-                  <p>{t.body}</p>
-                </div>
-              </div>
-            ))}
+            <h4>{t.title}</h4>
+            <p>{t.body}</p>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
+===================================================== */}
 
       {/* =====================================================
           WHY CHOOSE US
@@ -231,6 +268,89 @@ export default function About() {
 
         </div>
       </section>
+
+{/* =====================================================
+    BUILT TO SUPPLY. BUILT TO SCALE.
+===================================================== */}
+
+<section className="supply-section">
+  <div className="supply-container">
+
+    {/* LEFT SIDE */}
+    <div className="supply-intro reveal">
+      <span className="section-eyebrow">
+        BUILT TO SUPPLY. BUILT TO SCALE.
+      </span>
+
+      <h2>
+        Your Reliable Manufacturing
+        <br className="desktop-break" />
+        Partner for Growth.
+      </h2>
+
+      <Link to="/contact" className="supply-btn">
+        <span>TALK TO OUR TEAM</span>
+        <span className="supply-arrow">→</span>
+      </Link>
+    </div>
+
+    {/* RIGHT SIDE */}
+    <div className="supply-grid reveal">
+
+      <div className="supply-card">
+        <div className="supply-icon">
+          <img
+            src="/assets/icon/consistent-production.png"
+            alt="Consistent production"
+          />
+        </div>
+
+        <div className="supply-content">
+          <h4>CONSISTENT<br />PRODUCTION</h4>
+          <p>
+            Reliable manufacturing for recurring requirements.
+          </p>
+        </div>
+      </div>
+
+      <div className="supply-card">
+        <div className="supply-icon">
+          <img
+            src="/assets/icon/bulk-capability.png"
+            alt="Bulk capability"
+          />
+        </div>
+
+        <div className="supply-content">
+          <h4>BULK<br />CAPABILITY</h4>
+          <p>
+            Designed to support distributors, paint companies
+            and large-volume customers.
+          </p>
+        </div>
+      </div>
+
+      <div className="supply-card">
+        <div className="supply-icon">
+          <img
+            src="/assets/icon/pan-india-supply.png"
+            alt="Pan India supply"
+          />
+        </div>
+
+        <div className="supply-content">
+          <h4>PAN-INDIA<br />SUPPLY</h4>
+          <p>
+            Dependable dispatch & logistics to customers
+            across India.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
       {/* =====================================================
           FINAL CTA

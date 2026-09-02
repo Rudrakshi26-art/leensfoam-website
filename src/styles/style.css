@@ -4014,3 +4014,722 @@ img {
     opacity: 0 !important;
   }
 }
+/* =====================================================
+   MADE WITH PRECISION
+===================================================== */
+
+.precision-section {
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.precision-container {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+}
+
+/* ---------- INTRO ---------- */
+
+.precision-intro {
+  max-width: 720px;
+  margin-bottom: 50px;
+}
+
+.precision-intro .section-eyebrow {
+  display: inline-flex;
+  margin-bottom: 16px;
+}
+
+.precision-intro h2 {
+  margin: 0 0 20px;
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+}
+
+.precision-intro p {
+  max-width: 600px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+/* ---------- IMAGE ---------- */
+
+.precision-image {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.precision-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+
+/* =====================================================
+   TABLET
+   768px – 1024px
+===================================================== */
+
+@media (max-width: 1024px) {
+
+  .precision-section {
+    padding: 80px 0;
+  }
+
+  .precision-container {
+    width: min(92%, 900px);
+  }
+
+  .precision-intro {
+    max-width: 650px;
+    margin-bottom: 40px;
+  }
+
+  .precision-intro h2 {
+    font-size: clamp(36px, 5vw, 52px);
+  }
+
+  .precision-intro p {
+    font-size: 15px;
+  }
+
+  .precision-image {
+    border-radius: 10px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+   Up to 767px
+===================================================== */
+
+@media (max-width: 767px) {
+
+  .precision-section {
+    padding: 65px 0;
+  }
+
+  .precision-container {
+    width: 90%;
+  }
+
+  .precision-intro {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .precision-intro .section-eyebrow {
+    margin-bottom: 12px;
+    font-size: 11px;
+  }
+
+  .precision-intro h2 {
+    font-size: clamp(32px, 9vw, 42px);
+    line-height: 1.08;
+    letter-spacing: -0.8px;
+    margin-bottom: 16px;
+  }
+
+  .precision-intro p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .precision-image {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .precision-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   Up to 480px
+===================================================== */
+
+@media (max-width: 480px) {
+
+  .precision-section {
+    padding: 50px 0;
+  }
+
+  .precision-container {
+    width: 92%;
+  }
+
+  .precision-intro h2 {
+    font-size: 31px;
+  }
+
+  .precision-intro p {
+    font-size: 13.5px;
+  }
+
+  .precision-image {
+    border-radius: 6px;
+  }
+}
+
+/* =====================================================
+   SUPPLY SECTION
+===================================================== */
+
+.supply-section {
+  width: 100%;
+  padding: 90px 0;
+  background: #ffffff;
+  color: #06182b;
+  overflow: hidden;
+}
+
+.supply-container {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.9fr 2fr;
+  gap: 50px;
+
+  align-items: center;
+}
+
+
+/* =====================================================
+   LEFT CONTENT
+===================================================== */
+
+.supply-intro {
+  min-width: 0;
+}
+
+.supply-intro .section-eyebrow {
+  display: inline-flex;
+  margin-bottom: 18px;
+  color: var(--orange);
+}
+
+.supply-intro h2 {
+  margin: 0 0 30px;
+
+  color: #06182b;
+
+  font-size: clamp(38px, 4vw, 54px);
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+}
+
+
+/* =====================================================
+   TALK TO OUR TEAM BUTTON
+   DESKTOP / TABLET / MOBILE
+===================================================== */
+
+.supply-btn {
+  width: 300px;
+  max-width: 100%;
+  min-height: 52px;
+
+  padding: 0 25px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  border: none;
+  border-radius: 8px;
+
+  /* ORANGE → PINK GRADIENT */
+  background: linear-gradient(
+    90deg,
+    #ff7417 0%,
+    #d12d73 100%
+  );
+
+  color: #ffffff;
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+
+  box-shadow: 0 8px 20px rgba(209, 45, 115, 0.18);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* TEXT */
+
+.supply-btn .btn-text {
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+
+/* ARROW */
+
+.supply-btn .supply-arrow {
+  flex-shrink: 0;
+
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 1;
+
+  transition: transform 0.25s ease;
+}
+
+
+/* =====================================================
+   DESKTOP
+   1101px AND ABOVE
+===================================================== */
+
+@media (min-width: 1101px) {
+
+  .supply-btn {
+    width: 300px;
+    min-height: 52px;
+    padding: 0 25px;
+    border-radius: 8px;
+  }
+
+}
+
+
+/* =====================================================
+   TABLET
+   768px - 1100px
+===================================================== */
+
+@media (min-width: 768px) and (max-width: 1100px) {
+
+  .supply-btn {
+    width: 280px;
+    min-height: 52px;
+    padding: 0 23px;
+    border-radius: 8px;
+
+    font-size: 13px;
+  }
+
+  .supply-btn .supply-arrow {
+    font-size: 23px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+   481px - 767px
+===================================================== */
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  .supply-btn {
+    width: 100%;
+    min-height: 50px;
+    padding: 0 22px;
+    border-radius: 8px;
+
+    font-size: 12px;
+  }
+
+  .supply-btn .supply-arrow {
+    font-size: 22px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   0px - 480px
+===================================================== */
+
+@media (max-width: 480px) {
+
+  .supply-btn {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 18px;
+    border-radius: 7px;
+
+    font-size: 11.5px;
+    letter-spacing: 0.3px;
+  }
+
+  .supply-btn .supply-arrow {
+    font-size: 21px;
+  }
+
+}
+
+
+/* =====================================================
+   DESKTOP HOVER
+   GRADIENT NEVER CHANGES
+===================================================== */
+
+@media (hover: hover) and (pointer: fine) {
+
+  .supply-btn:hover {
+    background: linear-gradient(
+      90deg,
+      #ff7417 0%,
+      #d12d73 100%
+    );
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 12px 28px rgba(209, 45, 115, 0.28);
+  }
+
+  .supply-btn:hover .supply-arrow {
+    color: #ffffff;
+    transform: translateX(5px);
+  }
+
+}
+
+
+/* =====================================================
+   TOUCH DEVICES
+   NO STICKY HOVER
+===================================================== */
+
+@media (hover: none) {
+
+  .supply-btn:active {
+    transform: scale(0.98);
+
+    background: linear-gradient(
+      90deg,
+      #ff7417 0%,
+      #d12d73 100%
+    );
+  }
+
+}
+
+/* =====================================================
+   CARDS GRID
+===================================================== */
+
+.supply-grid {
+  min-width: 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.supply-card {
+  min-width: 0;
+  min-height: 225px;
+
+  padding: 25px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  background: #ffffff;
+
+  border: 2px solid var(--orange);
+  border-radius: 14px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.supply-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(6, 24, 43, 0.08);
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.supply-icon {
+  flex: 0 0 75px;
+
+  width: 75px;
+  height: 75px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.supply-icon img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+
+/* =====================================================
+   CARD TEXT
+===================================================== */
+
+.supply-content {
+  min-width: 0;
+}
+
+.supply-content h4 {
+  margin: 0 0 12px;
+
+  color: #06182b;
+
+  font-size: 17px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.supply-content p {
+  margin: 0;
+
+  color: #06182b;
+  opacity: 0.68;
+
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+
+/* =====================================================
+   TABLET
+   768px - 1100px
+===================================================== */
+
+@media (max-width: 1100px) {
+
+  .supply-section {
+    padding: 75px 0;
+  }
+
+  .supply-container {
+    width: 92%;
+
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .supply-intro {
+    max-width: 700px;
+  }
+
+  .supply-intro h2 {
+    font-size: clamp(38px, 5vw, 50px);
+  }
+
+  .supply-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .supply-card {
+    min-height: 230px;
+
+    padding: 22px 18px;
+
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    gap: 15px;
+  }
+
+  .supply-icon {
+    flex-basis: auto;
+
+    width: 58px;
+    height: 58px;
+  }
+
+  .supply-content h4 {
+    font-size: 15px;
+  }
+
+  .supply-content p {
+    font-size: 12.5px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+   0 - 767px
+===================================================== */
+
+@media (max-width: 767px) {
+
+  .supply-section {
+    padding: 60px 0;
+  }
+
+  .supply-container {
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 35px;
+  }
+
+
+  /* LEFT CONTENT */
+
+  .supply-intro {
+    width: 100%;
+    max-width: none;
+  }
+
+  .supply-intro .section-eyebrow {
+    margin-bottom: 13px;
+    font-size: 11px;
+  }
+
+  .supply-intro h2 {
+    margin-bottom: 25px;
+
+    font-size: clamp(32px, 8.5vw, 42px);
+    line-height: 1.08;
+    letter-spacing: -0.8px;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+
+  /* BUTTON */
+
+  .supply-btn {
+    width: 100%;
+    min-height: 50px;
+  }
+
+
+  /* CARDS */
+
+  .supply-grid {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+  }
+
+  .supply-card {
+    width: 100%;
+    min-height: 0;
+
+    padding: 22px;
+
+    display: grid;
+    grid-template-columns: 52px minmax(0, 1fr);
+
+    align-items: center;
+
+    gap: 17px;
+
+    border-radius: 10px;
+  }
+
+  .supply-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .supply-content h4 {
+    margin-bottom: 7px;
+    font-size: 15px;
+  }
+
+  .supply-content p {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   0 - 480px
+===================================================== */
+
+@media (max-width: 480px) {
+
+  .supply-section {
+    padding: 50px 0;
+  }
+
+  .supply-container {
+    width: 92%;
+  }
+
+  .supply-intro h2 {
+    font-size: 31px;
+  }
+
+  .supply-btn {
+    min-height: 48px;
+    padding: 0 18px;
+
+    font-size: 11px;
+  }
+
+  .supply-card {
+    padding: 18px;
+
+    grid-template-columns: 43px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .supply-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .supply-content h4 {
+    font-size: 14px;
+  }
+
+  .supply-content p {
+    font-size: 12px;
+  }
+}
