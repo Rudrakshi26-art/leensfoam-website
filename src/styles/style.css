@@ -51,7 +51,7 @@ header{
 }
 .brand{display:flex;align-items:center;gap:10px}
 .brand img {
-  height: 65px;
+  height: 70px;
   width: auto;
   object-fit: contain;
   background: transparent;
@@ -5594,4 +5594,3 @@ section:has(.supply-grid) {
     transition: none !important;
   }
 }
-
