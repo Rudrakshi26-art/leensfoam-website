@@ -1,5 +1,27 @@
+const IMAGE_MAP = {
+  'textured-exterior-roller-1788614148971.JPG': 'Textured Exterior Roller.JPG',
+  'microfibre-interior-roller-1788614203451.JPG': 'Microfibre Interior Roller.JPG',
+  'high-density-foam-roller-1788614352935.JPG': 'High-Density Foam Roller.JPG',
+  'specialty-rollers-1788614335430.JPG': 'Specialty Rollers.JPG',
+  'exterior-fabric-roller-1788614319070.JPG': 'Exterior Fabric Roller.JPG',
+  'interior-fabric-roller-1788614298280.JPG': 'Interior Fabric Roller.JPG',
+  'polyether-foam-roller-1788614272980.JPG': 'Polyether Foam Roller.JPG',
+  'polyster-foam-roller-1788614397949.JPG': 'Polyster Foam Roller.JPG',
+};
+
 export default function ProductCard({ product, index = 0 }) {
-  const { id, tag, name, desc, image, c1 } = product;
+  const {
+    id,
+    tag,
+    name,
+    description,
+    desc,
+    image,
+    c1,
+    c2,
+  } = product;
+
+  const frontendImage = IMAGE_MAP[image] || image || '';
 
   return (
     <div
@@ -9,21 +31,16 @@ export default function ProductCard({ product, index = 0 }) {
       <div
         className="product-visual"
         style={{
-          background: `linear-gradient(135deg, ${c1}22, ${product.c2}33)`
+          background: `linear-gradient(135deg, ${c1 || '#f5f5f5'}22, ${
+            c2 || '#ffffff'
+          }33)`,
         }}
       >
-        {image ? (
+        {frontendImage && (
           <img
-            src={`/assets/products/${image}`}
-            alt={name}
+            src={`/assets/products/${encodeURIComponent(frontendImage)}`}
+            alt={name || 'Product'}
             className="product-image"
-          />
-        ) : (
-          <div
-            className="product-roller"
-            style={{
-              background: `linear-gradient(90deg, ${c1}, ${product.c2})`
-            }}
           />
         )}
       </div>
@@ -36,12 +53,12 @@ export default function ProductCard({ product, index = 0 }) {
       </span>
 
       <span className="product-code mono">
-        {id.toUpperCase()}
+        {String(id || '').toUpperCase()}
       </span>
 
       <h3>{name}</h3>
 
-      <p>{desc}</p>
+      <p>{description || desc}</p>
 
       <span className="product-link">
         View details

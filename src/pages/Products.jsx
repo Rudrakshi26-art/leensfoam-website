@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import useReveal from '../hooks/useReveal.js';
 import ProductCard from '../components/ProductCard.jsx';
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 const FILTERS = [
   { key: 'all', label: 'All Products' },
   { key: 'foam', label: 'Foam Rollers' },
@@ -17,7 +19,6 @@ export default function Products() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
-  // re-run reveal whenever the filtered list changes
   useReveal([filter, products.length]);
 
   useEffect(() => {
@@ -26,9 +27,11 @@ export default function Products() {
         setLoading(true);
         setError('');
 
-        const response = await fetch(
-      `${import.meta.env.VITE_API_URL}/api/products`
-    );
+        if (!API_URL) {
+          throw new Error('VITE_API_URL is not configured');
+        }
+
+        const response = await fetch(`${API_URL}/api/products`);
 
         if (!response.ok) {
           throw new Error('Failed to fetch products');
@@ -36,7 +39,7 @@ export default function Products() {
 
         const data = await response.json();
 
-        setProducts(data);
+        setProducts(Array.isArray(data) ? data : []);
       } catch (err) {
         console.error('Error fetching products:', err);
         setError('Unable to load products.');
