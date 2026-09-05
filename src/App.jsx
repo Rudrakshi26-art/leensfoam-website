@@ -55,7 +55,7 @@ export default function App() {
       {!isAdminPage && <Header />}
 
       <Routes>
-        <Route path="/" element={<ProtectedHome />} />
+        <Route path="/" element={<Home />} />
 
         <Route path="/products" element={<Products />} />
 
