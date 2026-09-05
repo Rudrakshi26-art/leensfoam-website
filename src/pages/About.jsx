@@ -270,12 +270,11 @@ export default function About() {
 
 {/* =====================================================
     BUILT TO SUPPLY. BUILT TO SCALE.
-===================================================== */}
+=====================================================
 
 <section className="supply-section">
   <div className="supply-container">
 
-    {/* LEFT SIDE */}
     <div className="supply-intro reveal">
       <span className="section-eyebrow">
         BUILT TO SUPPLY. BUILT TO SCALE.
@@ -291,63 +290,14 @@ export default function About() {
       </Link>
     </div>
 
-    {/* RIGHT SIDE */}
     <div className="supply-grid reveal">
-
-      <div className="supply-card">
-        <div className="supply-icon">
-          <img
-            src="/assets/icon/consistent-production.png"
-            alt="Consistent production"
-          />
-        </div>
-
-        <div className="supply-content">
-          <h4>CONSISTENT<br />PRODUCTION</h4>
-          <p>
-            Reliable manufacturing for recurring requirements.
-          </p>
-        </div>
-      </div>
-
-      <div className="supply-card">
-        <div className="supply-icon">
-          <img
-            src="/assets/icon/bulk-capability.png"
-            alt="Bulk capability"
-          />
-        </div>
-
-        <div className="supply-content">
-          <h4>BULK<br />CAPABILITY</h4>
-          <p>
-            Designed to support distributors, paint companies
-            and large-volume customers.
-          </p>
-        </div>
-      </div>
-
-      <div className="supply-card">
-        <div className="supply-icon">
-          <img
-            src="/assets/icon/pan-india-supply.png"
-            alt="Pan India supply"
-          />
-        </div>
-
-        <div className="supply-content">
-          <h4>PAN-INDIA<br />SUPPLY</h4>
-          <p>
-            Dependable dispatch & logistics to customers
-            across India.
-          </p>
-        </div>
-      </div>
-
+      ...
     </div>
 
   </div>
 </section>
+
+===================================================== */}
 
       {/* =====================================================
           FINAL CTA

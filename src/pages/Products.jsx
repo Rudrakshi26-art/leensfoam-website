@@ -1,8 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import useReveal from '../hooks/useReveal.js';
 import ProductCard from '../components/ProductCard.jsx';
-import products from '../data/products.js';
 
 const FILTERS = [
   { key: 'all', label: 'All Products' },
@@ -14,11 +13,44 @@ const FILTERS = [
 
 export default function Products() {
   const [filter, setFilter] = useState('all');
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
 
-  // re-run reveal whenever the filtered list changes so new cards animate in
-  useReveal([filter]);
+  // re-run reveal whenever the filtered list changes
+  useReveal([filter, products.length]);
 
-  const visible = products.filter((p) => filter === 'all' || p.cat === filter);
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        setLoading(true);
+        setError('');
+
+        const response = await fetch(
+      `${import.meta.env.VITE_API_URL}/api/products`
+    );
+
+        if (!response.ok) {
+          throw new Error('Failed to fetch products');
+        }
+
+        const data = await response.json();
+
+        setProducts(data);
+      } catch (err) {
+        console.error('Error fetching products:', err);
+        setError('Unable to load products.');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
+  const visible = products.filter(
+    (p) => filter === 'all' || p.cat === filter
+  );
 
   return (
     <>
@@ -26,7 +58,9 @@ export default function Products() {
         <div className="breadcrumb">
           <Link to="/">Home</Link> / <span>Products</span>
         </div>
+
         <h1>Rollers built for every surface, every job.</h1>
+
         <p>
           From soft foam finishes on drywall to heavy-nap fabric rollers for
           textured exteriors — filter by category to find the right nap for
@@ -47,14 +81,34 @@ export default function Products() {
           ))}
         </div>
 
-        <div className="product-grid">
-          {visible.map((p, i) => (
-            <ProductCard product={p} index={i} key={p.id} />
-          ))}
-        </div>
+        {loading && (
+          <p style={{ color: 'var(--muted)' }}>
+            Loading products...
+          </p>
+        )}
 
-        {visible.length === 0 && (
-          <p style={{ color: 'var(--muted)' }}>No products in this category yet.</p>
+        {error && (
+          <p style={{ color: 'var(--muted)' }}>
+            {error}
+          </p>
+        )}
+
+        {!loading && !error && (
+          <div className="product-grid">
+            {visible.map((p, i) => (
+              <ProductCard
+                product={p}
+                index={i}
+                key={p.id}
+              />
+            ))}
+          </div>
+        )}
+
+        {!loading && !error && visible.length === 0 && (
+          <p style={{ color: 'var(--muted)' }}>
+            No products in this category yet.
+          </p>
         )}
       </section>
     </>
